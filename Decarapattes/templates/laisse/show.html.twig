@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Laisse{% endblock %}
+
+{% block body %}
+    <h1>Laisse</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ laisse.id }}</td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>{{ laisse.reference }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ laisse.description }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ laisse.prix }}</td>
+            </tr>
+            <tr>
+                <th>Quantite</th>
+                <td>{{ laisse.quantite }}</td>
+            </tr>
+            <tr>
+                <th>TailleLaisse</th>
+                <td>{{ laisse.tailleLaisse }}</td>
+            </tr>
+            <tr>
+                <th>CouleurLaisse</th>
+                <td bgcolor="{{ laisse.couleurLaisse }}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('laisse_index') }}">back to list</a>
+
+    <a href="{{ path('laisse_edit', {'id': laisse.id}) }}">edit</a>
+
+    {{ include('laisse/_delete_form.html.twig') }}
+{% endblock %}

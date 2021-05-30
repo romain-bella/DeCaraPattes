@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ComplementAlimentaire{% endblock %}
+
+{% block body %}
+    <h1>Create new ComplementAlimentaire</h1>
+
+    {{ include('complement_alimentaire/_form.html.twig') }}
+
+    <a href="{{ path('complement_alimentaire_index') }}">back to list</a>
+{% endblock %}

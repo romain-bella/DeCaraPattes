@@ -1,0 +1,352 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Visite & Promenade{% endblock %}
+
+{% block body %}
+    <style>
+    
+    .Contenu{
+        width:90%;
+        height:2000px;
+        background:white;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+        padding-top:50px;
+        margin-top:50px;
+        margin-bottom:50px;
+        font-size:40px;
+        font-weight:bold;
+      margin-top:-1400px;
+         z-index:1;
+    }
+    body{
+        font:caption;
+        background:#f7d794;
+    }
+    .PresentationActivite{
+        width:100%;
+        height:auto;
+        margin-top:30px;
+        margin-bottom:0px;
+        padding:30px;
+    }
+    .ObjectifActivite{
+        width:100%;
+        height:auto;
+    }
+    .ActiviteGauche{
+        width:30%;
+        float:left;
+        display:inline-block;
+    }
+    .ActiviteMilieu{
+        width:30%;
+        display:inline-block;
+        border-left:1px solid #9b59b6;
+        border-right:1px solid #9b59b6;
+    }
+    .ActiviteDroite{
+        width:30%;
+        float:right;
+        display:inline-block;
+    }
+    .TroisObjectifs{
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
+        height:auto;
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+    .TroisObjectifs2{
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
+        height:auto;
+        margin-top:0px;
+        margin-bottom:50px;
+    }
+    text{
+        font: caption;
+        }
+    .CcspBilan{
+        
+        width:100%;
+        height:450px;
+        padding:50px;
+        margin-top:50px;
+        
+    }
+    @media (max-width: 1760px){
+            .PicSupperpo3{
+                display:show
+            }
+            .PicSupperpoResponsive{
+                display:none;
+            }
+        }
+    @media (min-width: 1760px){
+            .PicSupperpoResponsive{
+                display:none;
+            }
+        }
+    .Tarif{
+       margin-top:50px;
+        width:100%;
+        height:auto;
+        padding:50px; 
+        
+    }
+    .DivGauche{
+        float:left;
+        width:100%;
+        height:500px;
+        background:white;
+        box-shadow: 4px 4px 4px 4px #95a5a6; 
+        border-radius:10px;
+    }
+    .TitreTarif{
+        width:100%;
+        height:100px;
+        padding-top:25px;
+        background:#9b59b6;
+        text-align:center;
+        
+    }
+    .TitreHaut{
+        background:#9b59b6;
+        border-radius:10px;
+        width:100%;
+        height:20px;
+        margin-bottom:-10px;
+      
+    }
+    .PicDroite{
+        float:right;
+        width:40%;
+        height:450px;
+        margin-top:100px;
+        margin-right:7.5%;
+    }
+    .contenuTarif{
+        margin-top:20px;
+         padding:25px;
+    }
+    .TarifBilan{
+        margin-top:1050px;
+        width:500px; 
+        height:auto;
+        margin-left:2.5%;
+        border-radius:10px;
+         z-index:2;
+         display: flex;
+    }
+    .ButtonService{
+        border-radius: 15px; 
+        padding:20px;
+       
+        font: caption;
+        text-decoration: none;    
+        color:white;
+        float:left;
+        margin-left:-25px;
+        margin-top:-7px;
+    }
+    .ButtonService:hover{
+        
+        transition-duration: 0.5s;
+        color:white;
+        
+    }
+    a{
+        text-decoration:none;    
+    }
+    .ImgButtom{
+        float:right;
+    }
+    .ClassBtn{
+        width:130px;
+        height:60px;
+        border-radius: 15px; 
+        Background-color: #9b59b6;  
+    }
+    .ClassBtn:hover{
+        border: 3px solid #f1c40f;
+    }
+    .ImgButtom{
+        margin-top:10px;
+        margin-left:-10px;
+    }
+    .Prix{
+        width:100%;
+        height:75px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:50px;
+        padding-left:130px;
+        
+    }
+    
+    </style>
+
+   <div class="TarifBilan">
+        <div class="DivGauche">
+            <div class="TitreHaut">
+            </div>
+            <div class="TitreTarif">
+                <text style="color:white;font-family: Trebuchet MS; font-size:30px;">Mes Tarifs</text>
+            </div>
+            <div class="contenuTarif" >
+                <div class="Prix">
+                    <text style=" text-align:center;color:#9b59b6;float:left; padding-left:;font-size:90px;">30 €  </text><text style="margin-top:60px;font-size:25px;color:#9b59b6;float:left; padding-left:25px;"> 1 heure</text>
+                </div>
+                
+                <img style="width:25px;  height:25px; float:left; "src="{{asset('PhotoBilan/IconPatteChien.png')}}"/>
+                <text style=" color:#9b59b6;float:left; padding-left:25px;">Analyser la situation actuelle</text>
+                <br> <br> 
+               
+                <img style="width:25px;  height:25px; float:left;  "src="{{asset('PhotoBilan/IconPatteChien.png')}}"/>
+                <text style=" color:#9b59b6;float:left; padding-left:25px;">Réunir certaines informations sur votre chien et votre mode de vie</text>
+                
+                <br><br> 
+                <img style="width:25px;  height:25px; float:left; "src="{{asset('PhotoBilan/IconPatteChien.png')}}"/>
+                <text style=" color:#9b59b6;float:left; padding-left:25px;">Cerner votre demande</text>
+                <br><br> 
+                
+                <div class="ClassBtn">
+                    <a href="http://192.168.1.20:10002/index.php/contact"class="ButtonService">Réserver</a>
+                    <img style="width:25px;  height:25px; float:left;" class="ImgButtom"src="{{asset('PhotoBilan/IconFleche.png')}}"/> 
+                    
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+    <div class="Contenu">
+    
+        <h1 style="width:100%;
+                color: black;
+                font-size:50px;
+                font-weight:bold;
+                font-family: Reem Kufi;
+                " 
+        class="blockquote text-center">Le Bilan Comportemental</h1>
+
+        <div class="Séparateur" style="padding-top:0px;border-bottom:2px solid #9b59b6; margin-left:auto;margin-right:auto;width:50%;   height:30px;float:center;" ></div>
+
+        <div class="PresentationActivite">
+      
+            <div class="Conteneur_Pic_TXT" style="width:100%; height:550px;">
+            <div class="TxtDroiteB_E" style="float:right; width:40%; height:450px; margin-top:50px;margin-right:35px;padding-right:30px;">
+                <text style="text-align:;">Éduquer passe nécessairement par une approche comportementale.</text>
+                </br>
+                <text>Aboiements intempestifs, agressivité sur congénères ou sur humains, malpropreté, destructions, phobies, dépression, anxiété, peurs, fugue,... sont des problèmes de comportement rencontrés fréquemment chez nos chiens.</text>
+                </br>
+                <text>Le bilan comportemental de votre chien s’effectue à votre domicile, il dure environ 1 heure et tous les membres de la famille sont invités à y participer. </text>
+                </br>
+                <text>Il me permet de mieux appréhender votre mode de vie et celui de votre animal, afin d’évaluer précisément le travail à effectuer ensemble.</text>
+                </br>
+            </div>
+            
+            <div class="PicSupperpo3" style="margin-top:-40px;width:50%; height:550px; margin-left:50px; float:left;">
+                <img class="Pic1" style="width:300px;  height:350px; margin-top:20px; border-radius:10px;"src="{{asset('PhotoBilan/ChienBilan5.jpg')}}"/>
+                <img class="Pic3"style="width:330px;  height:250px; margin-left:-50px; margin-top:10px; border-radius:10px;"src="{{asset('PhotoBilan/ChienBilan9.jpg')}}"/>
+                <br>
+                <img class="Pic2"style="width:300px;  height:320px; margin-left:50px;margin-top:-80px; border-radius:10px;"src="{{asset('PhotoBilan/ChienBilan6.jpg')}}"/>
+            </div>
+
+            <div class="PicSupperpoResponsive" style="margin-top:-40px;width:45%; height:550px; margin:auto; float:left;">
+                <br>
+                <img class="Pic3"style="width:300px;  height:250px; border-radius:10px;"src="{{asset('PhotoBilan/ChienBilan.jpg')}}"/>
+                <br>
+                <img class="Pic2"style="width:330px;  margin-top: 25px;height:250px; border-radius:10px;"src="{{asset('PhotoBilan/RioChiot.jpg')}}"/>
+            </div>
+
+            
+        </div>
+        </div>
+
+       
+         <div class="ObjectifActivite">
+            <h1 style="width:90%;
+                color: black;
+                position: absolute; 
+                font-size:30px;
+                font-weight:bold;
+                font-family: Reem Kufi;
+                " 
+            class="blockquote text-center">Objectifs</h1>
+            <div class="Séparateur" style="padding-top:70px;border-bottom:1px solid #9b59b6; margin-left:auto;margin-right:auto;width:60%;   height:30px;float:center;" ></div>
+            
+            <div class="TroisObjectifs">
+                <div class="ActiviteGauche">
+                    <img style="width:75px;  height:75px;  "src="{{asset('PhotoBilan/IconLoupe.png')}}"/>
+                    </br>
+                    <text style="padding-left:10px;">Analyser la situation actuelle</text>
+                </div>
+                
+                <div class="ActiviteMilieu">
+                    <img style="width:75px;  height:75px;  "src="{{asset('PhotoBilan/IconInfo.png')}}"/>
+                    </br>
+                    <text style="padding-left:10px;">Réunir certaines informations sur votre chien et votre mode de vie</text>
+                </div>
+
+                <div class="ActiviteDroite">
+                    <img style="width:75px;  height:75px;   "src="{{asset('CoursCollectif/iconHautParleur.png')}}"/>
+                    </br>
+                    <text style="padding-left:10px; ">Cerner votre demande</text>
+                </div>
+            </div>
+            <br>
+            <div class="TroisObjectifs2">
+                <div class="ActiviteGauche">
+                    <img style="width:75px;  height:75px;   "src="{{asset('CoursCollectif/iconMain.png')}}"/>
+                    </br>
+                    <text style="padding-left:10px;">Poser un diagnostic ou au moins m’orienter dessus</text>
+                </div>
+                    
+                <div class="ActiviteMilieu">
+                    <img style="width:75px;  height:75px;   "src="{{asset('PhotoBilan/IconPlan2.png')}}"/>
+                    </br>
+                    <text style="padding-left:10px;">Vous proposez un plan d’action adapté</text>
+                </div>
+
+                <div class="ActiviteDroite">
+                    <img style="width:75px;  height:75px;   "src="{{asset('CoursCollectif/iCon2Chien.png')}}"/>
+                    </br>
+                    <text style="padding-left:10px;">Vous donnez les premiers conseils</text>
+                </div> 
+            </div> 
+        </div>
+
+
+        <div class="CcspBilan">
+            <h1 style="width:90%;
+                color: black;
+                position: absolute; 
+                font-size:30px;
+                font-weight:bold;
+                font-family: Reem Kufi;
+                " 
+            class="blockquote text-center">comment ça se passe ? </h1>
+            <div class="Séparateur" style="padding-top:70px;border-bottom:1px solid #9b59b6; margin-left:auto;margin-right:auto;width:60%;   height:30px;float:center;" ></div>
+            
+            
+            <div style="float:left;  font-family:caption; margin-left: 10%;width:40%; margin-top:75px;">
+            <text>Cela passe inévitablement par un questionnaire sur votre vie quotidienne (coordonnées, habitudes,…) ainsi qu’une observation de la relation que vous entretenez avec votre chien. Je vous donnerai des conseils personnalisés tant au niveau comportemental que social, sur l’attitude à adopter face à votre compagnon de vie tout au long du rendez-vous.</text>
+             
+            </div>
+               
+            <img style="width:30%;  height:auto; margin-top:75px;float:right; border-radius:10px; margin-left:auto; margin-right:10%; "src="{{asset('PhotoBilan/ChienBilan4.jpg')}}"/>
+            
+        </div>
+
+    </div>
+    
+    
+    
+
+    
+
+{% endblock %}

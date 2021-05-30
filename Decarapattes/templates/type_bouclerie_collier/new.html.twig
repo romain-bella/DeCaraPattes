@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New TypeBouclerieCollier{% endblock %}
+
+{% block body %}
+    <h1>Create new TypeBouclerieCollier</h1>
+
+    {{ include('type_bouclerie_collier/_form.html.twig') }}
+
+    <a href="{{ path('type_bouclerie_collier_index') }}">back to list</a>
+{% endblock %}

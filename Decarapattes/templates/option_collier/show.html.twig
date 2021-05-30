@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OptionCollier{% endblock %}
+
+{% block body %}
+    <h1>OptionCollier</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ option_collier.id }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ option_collier.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('option_collier_index') }}">back to list</a>
+
+    <a href="{{ path('option_collier_edit', {'id': option_collier.id}) }}">edit</a>
+
+    {{ include('option_collier/_delete_form.html.twig') }}
+{% endblock %}

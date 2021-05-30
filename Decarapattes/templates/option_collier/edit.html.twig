@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit OptionCollier{% endblock %}
+
+{% block body %}
+    <h1>Edit OptionCollier</h1>
+
+    {{ include('option_collier/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('option_collier_index') }}">back to list</a>
+
+    {{ include('option_collier/_delete_form.html.twig') }}
+{% endblock %}

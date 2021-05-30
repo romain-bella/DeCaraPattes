@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Balade éducative {% endblock %}
+
+{% block body %}
+
+<style> 
+       h1{
+        font-family: "Gill Sans", sans-serif;
+        }
+        text{
+        font: caption;
+        }
+       body{
+           background:#f7d794;
+       }
+        .contenu{
+            width:70%;
+            height:1200px;
+            margin-top:30px;
+            margin-bottom:30px;
+            margin-left:auto;
+            margin-right:auto;
+            background:white;
+            box-shadow: 4px 4px 4px 4px #95a5a6;
+            padding:50px;
+        }
+        
+    </style>
+    
+    <div class="bandeau_temoignage" style="margin-bottom:px;">
+            <h1 style="width:100%;
+                    height:250px;;
+                    background: #9b59b6;
+                    color:white;
+                    padding-top:100px;
+                   
+                    text-decoration: underline #f7d794;
+                    font-size:40px;
+                    font-weight:bold;
+                
+                    " 
+            class="blockquote text-center">Les balades éducatives</h1>
+    </div>
+
+    <div class="contenu">
+
+        
+        <div style="float:right;"><img style="width:250px;  height:200px; border-radius:10px;  "src="{{asset('CoursCollectif/Chiot.jpg')}}"/></div>
+        <text style="text-align:center;">Préparation  de votre chien  à la vie en société, à des environnements différents et avec d'autres chiens.</text>
+        </br></br>
+        <text>Les sessions de cours collectifs d’éducation canine vous permettront de pratiquer au sein d’un groupe en situation réelle, de la vie quotidienne.</text>
+        </br></br>
+        <text>Pour tous les chiens, de toutes races, de tout âge, de toutes problématiques.</text>
+        </br></br>
+        <text>Vous y retrouverez 2 groupes : Adulte et Chiot.</text>
+        </br></br>
+        <text>Lorsque votre chien a atteint un certain niveau d’écoute seul, les cours de groupe offrent un perfectionnement de son obéissance en présence d’autres chiens.</text>
+        </br></br>
+        <text>Les cours collectifs permettent la mise en pratique des exercices dans des situations de la vie courante. Chacune des séances collectives vous donnera l’occasion d’en apprendre plus sur votre animal, dans différentes situations, les rencontres avec d’autres chiens, distraction, bruits etc…</text>
+
+        </br></br>
+        <text style="font-size:25px;">Les objetifs </text>
+        <div class="Séparateur" style="border-bottom: 2px solid #9b59b6; width:50%;  margin-right:auto; " ></div>
+        </br></br>
+        
+        <img style="width:75px;  height:75px;  "src="{{asset('CoursCollectif/iconLivre.png')}}"/>
+        <text style="padding-left:10px;">Apprentissage des ordres de bases hors contexte de la maison (la marche en laisse "ne pas tirer", le rappel , assis , coucher, pas bouger ect...</text>
+        </br></br>
+
+        <img style="width:75px;  height:75px;  "src="{{asset('CoursCollectif/iCon2Chien.png')}}"/>
+        <text style="padding-left:10px;">Côtoyer et interagir avec d’autres chiens (socialisation).</text>
+        </br></br>
+
+        <img style="width:75px;  height:75px;   "src="{{asset('CoursCollectif/iconHautParleur.png')}}"/>
+        <text style="padding-left:10px;">Améliorer la communication intraspécifique (lacunes pour certain chien à communiquer avec ses congénères). </text>
+        </br></br>
+
+        <img style="width:75px;  height:75px;   "src="{{asset('CoursCollectif/iconMain.png')}}"/>
+        <text style="padding-left:10px;">Initier le propriétaire à la psychologie canine, au comportement canin, à la communication, à une écoute mutuelle et au respect mutuel.</text>
+        </br></br>
+        
+        <img style="width:75px;  height:75px;   "src="{{asset('CoursCollectif/iconMaitreEtChien.png')}}"/>
+        <text style="padding-left:10px;">Etablir une bonne relation avec son chien.</text>
+        </br></br>
+
+        <img style="width:75px;  height:75px;   "src="{{asset('CoursCollectif/iconChienAgressif.png')}}"/>
+        <text style="padding-left:10px;">Peuvent aider pour les chiens qui ont des problèmes de peur (travaille en désensibilisation).</text>
+        </br></br></br>
+
+        <div>
+        <div style="float:left;"><img style="width:75px;;  height:75px;;   "src="{{asset('CoursCollectif/iconAttention.png')}}"/></div>
+
+        <div style="float:right; width:93%">
+        <text>Les chiens présentant des comportements agressifs envers leurs congénères et envers tous types de personnes se doivent OBLIGATOIREMENT de passer par un travail individuel et avoir l’autorisation de l’éducateur canin avant de pouvoir intégrer un cours collectif. </text>
+        <text>L’éducateur canin se réserve le droit de refuser à son cours collectif tous chiens ayant un comportement dangereux.</text>
+        </div>
+        
+        </div>
+        
+        
+    </div>
+{% endblock %}

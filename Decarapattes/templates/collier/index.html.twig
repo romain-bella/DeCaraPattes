@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Collier{% endblock %}
+
+{% block body %}
+    <h1>Les Colliers</h1>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reference</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Quantite</th>
+                <th>TailleCollier</th>
+                <th>CouleurCollier</th>
+				<th>OptionDuCollier</th>
+				<th>LaBouclerie</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for collier in colliers %}
+            <tr>
+                <td>{{ collier.id }}</td>
+                <td>{{ collier.reference }}</td>
+                <td>{{ collier.description }}</td>
+                <td>{{ collier.prix }}</td>
+                <td>{{ collier.quantite }}</td>
+                <td>{{ collier.tailleCollier }}</td>
+				<td>{{ collier.uneoption }}</td>
+				<td>{{ collier.unebouclerie }}</td>
+                <td bgcolor="{{ collier.couleurCollier }}"></td>
+				<td>
+                <td>
+                    <a href="{{ path('collier_show', {'id': collier.id}) }}">Montrer</a>
+                    <a href="{{ path('collier_edit', {'id': collier.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">Aucun d'enregistré</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('collier_new') }}">Nouveau collier</a><br/>
+	<a href="/index.php/produit/">Retour</a>
+{% endblock %}

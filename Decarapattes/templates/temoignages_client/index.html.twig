@@ -1,0 +1,149 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Temoignage{% endblock %}
+
+{% block body %}
+    <style> 
+        body{
+        font-family: "Gill Sans", sans-serif;
+        }
+        .TextDroite{
+            font-style: italic;
+            text-align:center;
+            padding-top: 50px;
+            padding-left:40px;
+            padding-right:50px;
+            vertical-align: middle;
+            width:350px; 
+            color: #576574; 
+            height:350px;
+            clear: none;
+            float:right;
+        }
+        .conteneurPhotoGaucheResponsive{
+            display:none;
+        }
+        .conteneurPhotoGauche{
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            width:700px;
+            height:350px;
+            padding:0px;
+            background-color:#f1f2f6;
+            margin-bottom:50px;
+            box-shadow: 4px 4px 4px 4px #95a5a6;
+        }
+
+         @media (max-width: 900px){
+            .conteneurPhotoGauche{
+                display:none;
+            }
+            .conteneurPhotoGaucheResponsive{
+                display:block;
+                margin-right:5%;
+                margin-left:5%;
+                width:90%;
+                height:680px;
+                box-shadow: 4px 4px 4px 4px #95a5a6; 
+                text-align:center;
+                margin-bottom:50px;
+                border-radius:5px;
+            }
+            .TextDroite{
+            font-style: italic;
+            text-align:center;
+            padding-top: 50px;
+            padding-left:50px;
+            padding-right:50px;
+            vertical-align: middle;
+            width:100%; 
+            color: #576574; 
+            height:350px;
+            clear: none;
+            float:right;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top:30px;
+        }
+        }
+    </style>
+
+    
+     <div class="bandeau_temoignage" style="margin-bottom:75px;">
+        <h1 style="width:100%;
+                height:100%;
+                color: white;
+                margin-top:150px;
+                position: absolute; 
+                text-decoration: underline #9b59b6;
+                font-size:40px;
+                font-weight:bold;
+                " 
+        class="blockquote text-center">Les Témoignages</h1>
+
+        <img style="width:100%;  height:auto;   "src="{{asset('Chien_Sombre.jpg')}}"/>
+       
+     </div>      
+            
+    {% for temoignage in temoignages %}
+
+
+        <div class="conteneurPhotoGauche">
+
+            <div class="TextDroite"  >
+            
+                <tr>
+                    <div style="font-weight: bold; ">
+                    <td >{{ temoignage.auteur }}</td></div>
+                    
+                    <div class="Séparateur" style="border-bottom: 1px solid #9b59b6; width:85%; margin-left:auto; margin-right:auto; margin-bottom:-20px; margin-top:10px;" ></div>
+                    
+                    </br></br>
+                    <td><a>"</a>{{ temoignage.libelle }}<a>"</a></td>
+            </div>
+                    <div class="PhotoGauche" style="text-align:left; width:300px; height:299px; float:left;">
+                        <img style="widht:300px; height:350px; padding-bottom:0px;"src="{{asset(''~temoignage.photo)}}"/>
+                                                                                         
+                    </div>
+
+                </tr>
+        </div>
+
+        <div class="conteneurPhotoGaucheResponsive">
+
+            
+            
+                <tr>
+
+                <div class="PhotoGauche" style=" width:100%; height:300px;">
+                        <img style="widht:100%; height:350px; margin-top : 20px; border-radius:5px;"src="{{asset(''~temoignage.photo)}}"/>
+                                                                                         
+                    </div>
+                   
+            <div class="TextDroite" >
+                   <div style="font-weight: bold; ">
+                    <td >{{ temoignage.auteur }}</td></div>
+                    
+                    <div class="Séparateur" style="border-bottom: 1px solid #9b59b6; width:85%; margin-left:auto; margin-right:auto; margin-bottom:-20px; margin-top:10px;" ></div>
+                    
+                    </br></br>
+                    <td><a>"</a>{{ temoignage.libelle }}<a>"</a></td>  
+
+                </tr>
+
+                </div>
+        </div>
+
+    
+
+
+
+            
+
+
+    {% endfor %}
+
+
+
+{% endblock %}

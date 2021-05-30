@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OptionLaisse index{% endblock %}
+
+{% block body %}
+    <h1>OptionLaisse index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for option_laisse in option_laisses %}
+            <tr>
+                <td>{{ option_laisse.id }}</td>
+                <td>{{ option_laisse.description }}</td>
+                <td>
+                    <a href="{{ path('option_laisse_show', {'id': option_laisse.id}) }}">show</a>
+                    <a href="{{ path('option_laisse_edit', {'id': option_laisse.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('option_laisse_new') }}">Create new</a>
+{% endblock %}

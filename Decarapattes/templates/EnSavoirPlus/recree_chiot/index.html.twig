@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RecreeChiot index{% endblock %}
+
+{% block body %}
+    <h1>RecreeChiot index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for recree_chiot in recree_chiots %}
+            <tr>
+                <td>{{ recree_chiot.id }}</td>
+                <td>
+                    <a href="{{ path('recree_chiot_show', {'id': recree_chiot.id}) }}">show</a>
+                    <a href="{{ path('recree_chiot_edit', {'id': recree_chiot.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('recree_chiot_new') }}">Create new</a>
+{% endblock %}

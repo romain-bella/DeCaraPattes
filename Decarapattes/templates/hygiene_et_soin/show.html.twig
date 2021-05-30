@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HygieneEtSoin{% endblock %}
+
+{% block body %}
+    <h1>HygieneEtSoin</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ hygiene_et_soin.id }}</td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>{{ hygiene_et_soin.reference }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ hygiene_et_soin.description }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ hygiene_et_soin.prix }}</td>
+            </tr>
+            <tr>
+                <th>Quantite</th>
+                <td>{{ hygiene_et_soin.quantite }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('hygiene_et_soin_index') }}">back to list</a>
+
+    <a href="{{ path('hygiene_et_soin_edit', {'id': hygiene_et_soin.id}) }}">edit</a>
+
+    {{ include('hygiene_et_soin/_delete_form.html.twig') }}
+{% endblock %}

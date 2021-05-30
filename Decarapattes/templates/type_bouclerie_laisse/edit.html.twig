@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit TypeBouclerieLaisse{% endblock %}
+
+{% block body %}
+    <h1>Edit TypeBouclerieLaisse</h1>
+
+    {{ include('type_bouclerie_laisse/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('type_bouclerie_laisse_index') }}">back to list</a>
+
+    {{ include('type_bouclerie_laisse/_delete_form.html.twig') }}
+{% endblock %}

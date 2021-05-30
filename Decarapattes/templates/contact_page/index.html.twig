@@ -1,0 +1,434 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactez-moi !{% endblock %}
+
+{% block body %}
+     <style>
+        body{
+            background:#f1f2f6;
+        }
+        h1{
+            font-family: "Gill Sans", sans-serif;
+        }
+            
+        .BoxContact{
+            margin-top:3%;
+            margin-left:auto;
+            margin-right:auto;
+            width: 80%; 
+            height: 700px;
+            display:block;
+            border-radius:10px;
+            padding:40px;
+        }
+        .Pic{
+            width:400px; 
+            margin-left:25px;
+            height:auto; 
+            margin-top:75px; 
+            border-radius:10px; 
+            float:left;
+        }
+        .Séparateur{
+            border-bottom:3px solid #9b59b6; 
+            width:50%; 
+            margin-left:0px; 
+            margin-right:auto;
+            margin-top:10px;
+        }
+            .LabelForm{
+                display:none;
+            }
+            label{
+                display:none;
+            }
+            .InputProject{
+                width:100%;
+                height:350px;
+                padding: 12px 20px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+            
+            }
+            input::placeholder{
+                padding:10px;
+                color:#ccc;
+            }
+            .DivForm{
+                background:white;
+                padding:50px;
+                width:650px;
+                height:550px;
+                float:right;
+                
+            }
+            .AlignGauche{
+                float:left;
+                width:50%;
+                height:50px;
+                
+                border:0px;
+            }
+            .AlignGaucheTxt{
+                float:left;
+                width:100%;
+                height:250px;
+                margin-bottom:25px;
+                border-radius:5px;
+                
+                
+                
+            }
+            .AlignDroite{
+                float:right;
+                width:45%;
+                height:50px;
+                
+            }
+            .LigneForm{
+                width:100%;
+                height:75px;
+            }
+            .InputTxt{
+                width:100%;
+                height:50px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                padding:15px;
+            }
+
+            .ButtonService{
+                border-radius: 30px; 
+                padding:10px;
+                color:white;
+                background-color: #ffaf40;
+                font: caption;
+                text-decoration: none;
+                float:right;
+                border : 0px;
+                height:50px;
+                width:100px;
+                
+                
+            }
+            .TxtDroite{
+                float:right;
+                width:60%;
+                height:500px;
+            }
+            .TxtGauche{
+                float:left;
+                width:35%;
+                height:500px;
+                margin-left:50px;
+                font-family:"Trebuchet MS";
+            }
+            .BoxContactResponsive{
+                    display:none;
+                }
+            
+            @media(max-width:900px){
+                .BoxContact{
+                    display:none;
+                }
+                .BoxContactResponsive{
+                    display:block;
+                    width:90%;
+                    margin-left:5%;
+                    margin-right:5%;
+                    height:auto;
+                    padding:10px;
+                }
+                .TxtGaucheResponsive{
+                
+                text-align:center;
+                width:100%;
+                height:auto;
+                
+                font-family:"Trebuchet MS";
+            }
+            .TxtDroiteResponsive{
+                float:center;
+                width:100%;
+                height:500px;
+                margin-bottom:150px;
+            }
+            .DivFormResponsive{
+                background:white;
+                padding:30px;
+                width:100%;
+                height:630px;
+                float:center;
+            }
+           
+            
+            }
+    </style>
+
+
+    
+
+
+        <div class="BoxContact" >
+            <div class="TxtGauche">
+                <text style="font-size:40px; color:#ffaf40; ">De Cara Pattes </text>
+                <br> 
+                <text style="font-size:60px;  ">Contact</text>
+                <br>
+                <text style="font-size:25px;  ">Vous avez une question ?</text>
+                <br>
+                <text style="font-size:25px;  ">Besoin d'une information ?</text>
+                <br>
+                <text style="font-size:25px;  ">Un Projet ?</text>
+                <br><br>
+
+                <br>
+                <text style="font-size:30px;  ">Contactez moi via :</text>
+
+                <div class="Séparateur" ></div>
+
+                <div class="OutilContact" style="padding-left:20px; ">
+                    <table>
+                        <br>
+                        <tr>
+                            <text style="font-size:25px;  "> mon formulaire de contact </text>
+                        </tr>
+                        <tr>
+                            <img class="Logo" style="  width:45px; height:45px; margin-right:15px;"  src="{{asset('PhotoContact/IconArrow.png')}}"/>
+                        </tr>
+
+                        <br>
+
+                        <tr>
+                            <img class="Logo" style="  width:25px; height:25px; margin-right:15px;"  src="{{asset('PhotoContact/IconPhone.png')}}"/>
+                            </tr>
+                            <tr>
+                            <text style="font-size:25px;  "> 06 48 88 08 14</text>
+                        </tr>
+
+                        <br><br>
+
+                        <tr>
+                            <img class="Logo" style="  width:25px; height:25px; margin-right:15px;"  src="{{asset('PhotoContact/IconMail.png')}}"/>
+                        </tr>
+                        <tr>
+                            <text style="font-size:25px;  "> Decarapattes@outlook.fr</text>
+                        </tr>
+
+                        <br>
+
+                        <tr >
+                            <a href="https://www.instagram.com/decarapattes/">
+                            <img class="Logo"  style=" margin-bottom:20px;margin-top:20px; margin-right:30px;width:75px; height:75px;" src="{{asset('PhotoContact/IconInstagram.svg')}}"/>
+                            </a>
+
+                            <a href="https://www.facebook.com/decarapattes">
+                            <img class="Logo" style="margin-bottom:20px; margin-top:20px; width:75px; height:75px;"  src="{{asset('PhotoContact/IconFacebook.svg')}}"/>
+                            </a>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                </div>
+                
+                
+                
+                
+                
+            </div>
+            
+            
+
+           <!-- <div class="TxtDroite">  
+                <div class="DivForm">
+                    <form class="FormContact">
+                    <div class="LigneForm">
+                        <p class="AlignGauche">
+                            <label class="LabelForm">Nom</label>
+                            <input class="InputTxt"type="text" placeholder="Nom">
+                        </p>
+                        <p class="AlignDroite">
+                            <label class="LabelForm">Prenom</label>
+                            <input class="InputTxt" type="text" placeholder="Prenom">
+                        </p>
+                    </div>
+                    
+                    <div class="LigneForm">
+                        <p class="AlignGauche">
+                            <label class="LabelForm">Téléphone</label>
+                            <input class="InputTxt"type="text" placeholder="Téléphone">
+                        </p>
+                        <p class="AlignDroite">
+                            <label class="LabelForm">Mail</label>
+                            <input class="InputTxt" type="text" placeholder="Mail">
+                        </p >
+                    </div>
+                    <div class="LigneForm">
+                        <p class="AlignGaucheTxt">
+                            <label class="LabelForm">Projet</label>
+                            <textarea  class="InputProject" placeholder="Expliquer votre problèmatique"></textarea>
+                            
+                        </p>
+                    </div>
+                   
+                    <div class="LigneForm">
+                        <button class="ButtonService">Envoyer</button>
+                     </div>
+
+                    </form>
+                </div>
+            </div>  --> 
+
+
+        
+
+            <div class="TxtDroite">  
+                <div class="DivForm">
+                    <div class="form-group" style="width:100%; height:700px;">
+                        <div class="LigneForm">
+                            {{form_start(ContactForm)}}
+                                <div class="AlignGauche">
+                                    {{ form_row(ContactForm.nom, {'attr':{'class':'form-control','placeholder':'Nom'}}) }}
+                                </div>
+                                <div class="AlignDroite">
+                                    {{ form_row(ContactForm.prenom, {'attr':{'class':'form-control','placeholder':'Prénom'}}) }}
+                                </div>
+                            </div>
+                            
+                            <div class="LigneForm">
+                                    <div class="AlignGauche">
+                                        {{ form_row(ContactForm.telephone, {'attr':{'class':'form-control' ,'placeholder':'Téléphone'}}) }}
+                                    </div>
+                                    <div class="AlignDroite">
+                                        {{ form_row(ContactForm.email, {'attr':{'class':'form-control','placeholder':'Email'}}) }}
+                                    </div >
+                            </div>
+
+                            <div class="LigneForm">
+                                    <div class="AlignGaucheTxt">
+                                    {{ form_row(ContactForm.libelleContact, {'attr':{'class':'AlignGaucheTxt','placeholder':'Expliquer votre problèmatique', 'style':'padding:20px;border-color:#bdc3c7;'}}) }}
+                                    </div>
+                                
+                        
+                                <div class="LigneForm"> 
+                                    {{ form_row(ContactForm.envoyer , {'attr':{'class':'ButtonService'}}) }}
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+
+
+
+        <div class="BoxContactResponsive">
+            <div class="TxtGaucheResponsive">
+                <p style="font-size:35px; color:#ffaf40; ">De Cara Pattes </p>
+                
+                <p style="font-size:60px;  ">Contact</p>
+
+                <div class="Séparateur" style="border-bottom:1px solid #9b59b6; margin-left:auto;margin-right:auto;width:70%; margin-top:-35px;  height:30px;float:center;" ></div>
+               
+                <p style="font-size:25px; margin-top:25px; margin-bottom:15px;">Vous avez une question ?</p>
+               
+                <p  style="font-size:25px;margin-bottom:15px;">Besoin d'une information ?</p>
+               
+                <p  style="font-size:25px;  margin-bottom:15px;">Un Projet ?</p>
+                <br><br>
+
+
+                 <br>
+                <p style="font-size:30px;  ">Contactez moi via :</p>
+
+                <div class="Séparateur" style="border-bottom:1px solid #9b59b6; margin-left:auto;margin-right:auto;width:90%; margin-top:-20px;  height:30px;float:center;" ></div>
+
+                <div class="OutilContact" style="padding-left:20px; ">
+                    <table>
+
+                        <br><br>
+
+                        <tr>
+                            <img class="Logo" style="  width:25px; height:25px; margin-right:5px;margin-bottom:10px;"  src="{{asset('PhotoContact/IconPhone.png')}}"/>
+                            </tr>
+                            <tr>
+                            <text style="font-size:25px;  "> 06 48 88 08 14</text>
+                        </tr>
+
+                        <br><br><br>
+
+                        <tr>
+                            <img class="Logo" style="  width:25px; height:25px; margin-right:5px;"  src="{{asset('PhotoContact/IconMail.png')}}"/>
+                        </tr>
+                        <tr>
+                            <text style="font-size:19px;  "> Decarapattes@outlook.fr</text>
+                        </tr>
+
+                        <br><br>
+
+                        <tr >
+                            <a href="https://www.instagram.com/decarapattes/">
+                            <img class="Logo"  style=" margin-bottom:20px;margin-top:20px; margin-right:30px;margin-left:-10px;width:75px; height:75px;" src="{{asset('PhotoContact/IconInstagram.svg')}}"/>
+                            </a>
+
+                            <a href="https://www.facebook.com/decarapattes">
+                            <img class="Logo" style="margin-bottom:20px; margin-top:20px; width:75px; height:75px;"  src="{{asset('PhotoContact/IconFacebook.svg')}}"/>
+                            </a>
+                        </tr>
+
+                        <br><br>
+                        <tr>
+                            <p style="font-size:25px;  "> mon formulaire de contact </p>
+                        </tr>
+                        <tr>
+                            <img class="Logo" style="  width:45px; height:45px; margin-right:15px;transform: rotate(90deg);"  src="{{asset('PhotoContact/IconArrow.png')}}"/>
+                        </tr>
+                    </table>
+                    <br>
+                    
+                </div>
+
+            
+
+            <div class="TxtDroiteResponsive">  
+                <div class="DivFormResponsive">
+                     <form class="FormContact">
+                        <div class="LigneForm">
+                           
+                                <div class="AlignGauche">
+                                    {{ form_row(ContactForm.nomRsp, {'attr':{'class':'form-control','placeholder':'Nom'}}) }}
+                                </div>
+                                <div class="AlignDroite">
+                                    {{ form_row(ContactForm.prenomRsp, {'attr':{'class':'form-control','placeholder':'Prénom'}}) }}
+                                </div>
+                            </div>
+                            
+                            <div class="LigneForm">
+                                    <div class="AlignGauche">
+                                        {{ form_row(ContactForm.telephoneRsp, {'attr':{'class':'form-control' ,'placeholder':'Téléphone'}}) }}
+                                    </div>
+                                    <div class="AlignDroite">
+                                        {{ form_row(ContactForm.emailRsp, {'attr':{'class':'form-control','placeholder':'Email'}}) }}
+                                    </div >
+                            </div>
+
+                            <div class="LigneForm">
+                                    <div class="AlignGaucheTxt">
+                                    {{ form_row(ContactForm.libelleContactRsp, {'attr':{'class':'AlignGaucheTxt','placeholder':'Expliquer votre problèmatique', 'style':'padding:20px;border-color:#bdc3c7;'}}) }}
+                                    </div>
+                                
+                        
+                                <div class="LigneForm"> 
+                                    {{ form_row(ContactForm.envoyerRsp , {'attr':{'class':'ButtonService'}}) }}
+                                </div>
+                            </div>
+                            {{form_end(ContactForm)}}
+                        </div>
+                </div>
+            </div>  
+        </div>
+            
+            
+{% endblock %}

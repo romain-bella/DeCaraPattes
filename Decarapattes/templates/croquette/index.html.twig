@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Croquette{% endblock %}
+
+{% block body %}
+    <h1>Les Croquettes</h1>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reference</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Quantite</th>
+                <th>GoutCroquette</th>
+                <th>TailleCroquette</th>
+                <th>TypeCroquette</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for croquette in croquettes %}
+            <tr>
+                <td>{{ croquette.id }}</td>
+                <td>{{ croquette.reference }}</td>
+                <td>{{ croquette.description }}</td>
+                <td>{{ croquette.prix }}</td>
+                <td>{{ croquette.quantite }}</td>
+                <td>{{ croquette.goutCroquette }}</td>
+                <td>{{ croquette.tailleCroquette }}</td>
+                <td>{{ croquette.typeCroquette }}</td>
+                <td>
+                    <a href="{{ path('croquette_show', {'id': croquette.id}) }}">Détail</a>
+                    <a href="{{ path('croquette_edit', {'id': croquette.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">Aucune croquette enregistrée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('croquette_new') }}">Nouvelles croquettes</a><br/>
+	<a href="/index.php/produit/">Retour</a>
+{% endblock %}

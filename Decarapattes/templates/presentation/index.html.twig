@@ -1,0 +1,439 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Présentation{% endblock %}
+
+{% block body %}
+
+    <style> 
+       h1{
+        font-family: "Gill Sans", sans-serif;
+        }
+        text{
+        font: caption;
+        }
+        .TextDroiteSupp{
+            z-index:1; 
+            background-color:white; 
+            margin-left:-200px;
+            border-radius:8px;
+            box-shadow: 4px 4px 4px 4px #95a5a6; 
+            width:700px; 
+            height:700px; 
+            position: absolute;
+            text-align:center;
+            padding-top:50px;
+            padding-left:70px;
+            padding-right:90px;
+            
+        }  
+        .conteneurPrésentationResponsive{
+            display:none;
+        }
+        .ConteneurElementResponsive{
+            display:none;
+        } 
+        .ConteneurLien {
+        position: relative;
+        text-align:center;
+        color: white;
+        }
+        a{
+           text-decoration:none;
+        }
+        .TxtCentrerPic {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        color: #9b59b6;
+        font-family:'Trebuchet MS';
+        }
+        .conteneurPrésentation{
+            display:block;
+            margin-left:auto;
+            margin-right:auto; 
+            margin-top: 200px; 
+            margin-bottom:150px;
+            width:60%;
+            height:1350px;
+            background:white;
+            box-shadow: 4px 4px 4px 4px #95a5a6;
+            padding:50px;
+        }
+         @media (max-width: 900px){
+              
+
+            .ConteneurElementResponsive{
+                margin-left:5%;
+                margin-right:5%;
+                width: 90%; 
+                height: auto;
+                box-shadow: 4px 4px 4px 4px #95a5a6;
+                border-radius:10px;
+                padding:30px;
+                margin-bottom:100px;
+                display:block;
+                text-align:center;
+               
+            }
+            .ConteneurElement{
+                 display:none;
+            }
+            .conteneurPrésentationResponsive{
+                display:block;
+                background-color:white; 
+                margin-left:5%; 
+                margin-right:5%;
+                border-radius:8px;
+                box-shadow: 4px 4px 4px 4px #95a5a6; 
+                width:90%; 
+                height:auto; 
+                position: absolute;
+                text-align:center;
+                padding-top:30px;
+                margin-bottom:50px;
+            }
+            
+            .conteneurPrésentation{
+                display:none;
+            }
+            .Séparateur{
+                border-bottom:1px solid #9b59b6; 
+                width:100%; 
+                margin-left:0px; 
+                margin-right:auto;
+            }
+         }
+    </style>
+    <!-- Partie Titre -->
+     <div class="bandeau_temoignage" style="margin-bottom:75px;">
+        <h1 style="width:100%;
+                height:100%;
+                color: white;
+                margin-top:10%;
+                position: absolute; 
+                text-decoration: underline #9b59b6;
+                font-size:40px;
+                font-weight:bold;
+                " 
+        class="blockquote text-center" id="TitreService">Présentation</h1>
+
+        <img style="width:100%;  height:auto;   "src="{{asset('PhotoPresentation/ChienBurst.jpg')}}"/>
+       
+    </div>
+    
+    <div class="ConteneurElement">
+        <!-- Partie photo text supperposer grace au z-index, mis dans une div parce que sinon tout le contenu est transparant a cause des z-index -->   
+        <div class="ConteneurImageTextSupperpo" style="margin-bottom:150px; width: 900px; height:600px; margin-left:auto; margin-right:auto;">
+            <div class="PhotoGaucheSupp" style="z-index:2; position: absolute; margin-left:450px; margin-top:50px;">
+                <img style="   width:600px;  height:auto; border-radius:8px;  "src="{{asset('PhotoPresentation/ChienAnaelle.jpg')}}"/>
+            </div> 
+            <div class="TextDroiteSupp">
+                <text class="blockquote text-center"style="width:100%;text-align: center; font-size:30px;;"> Moi c'est Anaëlle ! </text>
+                <div class="Séparateur" style="border-bottom:1px solid #9b59b6; margin-left:auto;margin-right:auto;width:50%;   height:30px;float:center;" > </div>
+                </br>
+                </br>
+                </br>
+                <text style="width:100%;text-align: center; font-size:20px;"> Passionnée depuis toujours par les animaux et très active dans leur protection, c’est tout naturellement que j’ai trouvé ma voie.</text>
+                </br></br>
+                <text style="width:100%;text-align: center; font-size:20px;">J’ai débuté mon parcours professionnel dans le métier du cheval, durant 5 ans, puis 2 ans en tant que vendeuse en animalerie et je suis arrivée au choix final de l'éducation canine pour leur bien être et le vôtre. </text>
+                </br></br>
+                <text  style="width:100%;text-align: center; font-size:20px;;">   Je suis titulaire du CCAD (Certificat de capacité d’animaux domestiques) que j'ai obtenu avec mon Baccalauréat en tant que vendeuse en Animalerie. Je détiens le permis de détention pour chien de catégorie 1 et 2. Pour compléter mon cursus, j'ai effectuer une formation aux premiers secours animalier.</text>
+            </div>
+        </div>
+    </div>
+
+    <div class="ConteneurElementResponsive">
+        <text class="blockquote text-center"style="width:100%;text-align: center; font-size:30px;"> Moi c'est Anaëlle ! </text>
+
+        <div class="Séparateur" style="border-bottom:1px solid #9b59b6; margin-left:auto;margin-right:auto;width:50%;   height:30px;float:center;" ></div>
+
+        <img style="width:80%;  height:auto; border-radius:8px; margin-top:30px; "src="{{asset('PhotoPresentation/ChienAnaelle.jpg')}}"/>
+
+        <div style="padding:30px; height:auto;">
+            <text style="width:100%;text-align: center; font-size:20px;"> Passionnée depuis toujours par les animaux et très active dans leur protection, c’est tout naturellement que j’ai trouvé ma voie.</text>
+            </br></br>
+            <text style="width:100%;text-align: center; font-size:20px;">J’ai débuté mon parcours professionnel dans le métier du cheval, durant 5 ans, puis 2 ans en tant que vendeuse en animalerie et je suis arrivée au choix final de l'éducation canine pour leur bien être et le vôtre. </text>
+            </br></br>
+            <text  style="width:100%;text-align: center; font-size:20px;;">   Je suis titulaire du CCAD (Certificat de capacité d’animaux domestiques) que j'ai obtenu avec mon Baccalauréat en tant que vendeuse en Animalerie. Je détiens le permis de détention pour chien de catégorie 1 et 2. Pour compléter mon cursus, j'ai effectuer une formation aux premiers secours animalier.</text> 
+        </div>
+         
+    </div> 
+
+    <div class="conteneurPrésentation">
+        <div style="text-align:center;width:100%;">
+            <text class="blockquote text-center"style="width:100%;text-align: center; font-size:30px;;"> Mes </text><text style="font-family: MV Boli; font-size:35px;"> qualifications </text>
+            <div class="Séparateur" style="border-bottom:1px solid #9b59b6; margin-left:auto;margin-right:auto;width:50%;   height:30px;float:center;" ></div>
+                    
+        </div>
+
+        <div class="LesDiplomes" style="margin-top: 50px;;">
+            <!-- Bac -->
+            <div class="avec_photo" style="border-radius:10px;float :left;width: 300px; height: 200px;display: inline-block; margin-left:50px; margin-right:0px;margin-bottom:200px; box-shadow: 4px 4px 4px 4px #95a5a6;">
+                    <table>
+                        <div>
+                            <tr>
+                                <th>
+                                    <div class="ConteneurLien">
+                                        <a target="_blank" href="{{asset('PhotoPresentation/BacProAnaelle.PNG')}}">
+                                            <img style=" border-radius:10px; width:300px;  height:200px;  opacity: 0.5; "src="{{asset('PhotoPresentation/BacProAnaelle.PNG')}}"/>
+                                            <div class="TxtCentrerPic ">Voir</div>
+                                        </a>
+                                    </div>
+                                </th>
+                            </tr>
+                        </div>
+                        
+
+                        <div>
+                            <tr style="text-align:center;">
+                                <th style="text-align:center; padding:15px;">
+                                    <text style="font: caption; font-size:18px; padding-bottom:10px;">BACCALAURÉAT PROFESSIONNEL</text>
+                                    <div class="Séparateur" style="border-bottom: 1px solid #9b59b6; width:85%; margin-left:auto; margin-right:auto; margin-bottom:-20px; margin-top:10px;" ></div>
+                                    </br>
+                                    </br>
+                                    <text>Spécialité : technicien conseil-vente en animalierie</text>
+                                    </br>
+                                </th>
+                            </tr>
+                        </div>
+                    </table>
+            </div> 
+
+            <!-- Sym Dog -->
+            <div class="avec_photo" style="border-radius:10px;float:right;width: 300px; height: 200px;display: inline-block; margin-left:50px; margin-right:50px;margin-bottom:200px; box-shadow: 4px 4px 4px 4px #95a5a6;">
+                    <table>
+                        <div>
+                            <tr>
+                                <th>
+                                    <div class="ConteneurLien">
+                                        <a target="_blank" href="{{asset('PhotoPresentation/Certification SymDog 001.jpg')}}">
+                                            <img style=" border-radius:10px; width:300px;  height:200px;  opacity: 0.5; "src="{{asset('PhotoPresentation/Certification SymDog 001.jpg')}}"/>
+                                            <div class="TxtCentrerPic ">Voir</div>
+                                            
+                                        </a>
+                                    </div>
+                                </th>
+                            </tr>
+                        </div>
+                        
+
+                        <div>
+                            <tr style="text-align:center;">
+                                <th style="text-align:center; padding:15px;">
+                                    <text style="font: caption; font-size:18px; padding-bottom:10px;">CERTIFICATION ÉDUCATEUR CANIN</text>
+                                    <div class="Séparateur" style="border-bottom: 1px solid #9b59b6; width:85%; margin-left:auto; margin-right:auto; margin-bottom:-20px; margin-top:10px;" ></div>
+                                    </br>
+                                    </br>
+                                    <text>formation au métier d'éducateur canin par SymDog International</text>
+                                    </br>
+                                </th>
+                            </tr>
+                        </div>
+                    </table>
+            </div> 
+            </br>
+                
+            <!-- permis d'étention-->
+            <div class="avec_photo" style="border-radius:10px;float :left;width: 300px; height: 300px;display: inline-block; margin-left:50px;margin-right:50px; margin-bottom:50px; box-shadow: 4px 4px 4px 4px #95a5a6;">
+                    <table>
+                        <div>
+                            <tr>
+                                <th>
+                                    <div class="ConteneurLien">
+                                        <a target="_blank" href="{{asset('PhotoPresentation/Permis Détention chien de categorie 001.jpg')}}">
+                                            <img style="  border-radius:10px;opacity: 0.5;width:300px;  height:300px;   "src="{{asset('PhotoPresentation/Permis Détention chien de categorie 001.jpg')}}"/>
+                                            <div class="TxtCentrerPic ">Voir</div>
+                                        </a>
+                                    </div>
+                                </th>
+                            </tr>
+                        </div>
+                        
+
+                        <div>
+                            <tr style="text-align:center;">
+                                <th style="text-align:center; padding:15px;">
+                                    <text style="font: caption; font-size:18px; padding-bottom:10px;">ATTESTATION D'APPTITUDE CHIEN DE CATEGORIE</text>
+                                    <div class="Séparateur" style="border-bottom: 1px solid #9b59b6; width:85%; margin-left:auto; margin-right:auto; margin-bottom:-20px; margin-top:10px;" ></div>
+                                    </br>
+                                    </br>
+                                    <text>Permis de détention de chien de catégorie 1 et 2 délivré par SymDog International</text>
+                                    </br>
+                                </th>
+                            </tr>
+                        </div>
+                    </table>
+            </div> 
+
+            <!-- premier secours canin-->
+            <div class="avec_photo" style="border-radius:10px; float:right;width: 300px; height: 200px;display: inline-block; margin-left:50px;margin-right:50px; margin-bottom:50px; box-shadow: 4px 4px 4px 4px #95a5a6;">
+                    <table>
+                        <div>
+                            <tr>
+                                <th>
+                                    <div class="ConteneurLien">
+                                        <a target="_blank" href="{{asset('PhotoPresentation/PremierSecoursCaninFélin.jpg')}}">
+                                            <img style="  border-radius:10px;width:300px; opacity: 0.5; height:200px;   "src="{{asset('PhotoPresentation/PremierSecoursCaninFélin.jpg')}}"/>
+                                            <div class="TxtCentrerPic ">Voir</div>
+                                        </a>
+                                    </div>
+                                </th>
+                            </tr>
+                        </div>
+                        
+
+                        <div>
+                            <tr style="text-align:center;">
+                                <th style="text-align:center; padding:15px;">
+                                    <text style="font: caption; font-size:18px; padding-bottom:10px;">CERTIFICATION PREMIERS SECOURS CANIN ET FÉLIN</text>
+                                    <div class="Séparateur" style="border-bottom: 1px solid #9b59b6; width:85%; margin-left:auto; margin-right:auto; margin-bottom:-20px; margin-top:10px;" ></div>
+                                    </br>
+                                    </br>
+                                    <text>formation au geste des premiers secours canin et félin par Premier Secours Animaliers</text>
+                                    </br>
+                                </th>
+                            </tr>
+                        </div>
+                    </table>
+            </div> 
+        </div>                     
+    </div>
+
+    <div class="conteneurPrésentationResponsive">
+         <div style="padding:30px; height:auto;">
+            <!-- Bac -->
+            <div class="avec_photo" style="border-radius:10px;float :left;width: 95%; height: auto;display: inline-block; margin-left:2.5%; margin-right:2.5%;margin-bottom:50px; box-shadow: 4px 4px 4px 4px #95a5a6;">
+                    <table>
+                        <div>
+                            <tr>
+                                <th>
+                                    <div class="ConteneurLien">
+                                        <a target="_blank" href="{{asset('PhotoPresentation/BacProAnaelle.PNG')}}">
+                                            <img style=" border-radius:10px; width:100%;  height:200px;  opacity: 0.5; "src="{{asset('PhotoPresentation/BacProAnaelle.PNG')}}"/>
+                                            <div class="TxtCentrerPic ">Voir</div>
+                                        </a>
+                                    </div>
+                                </th>
+                            </tr>
+                        </div>
+                        
+
+                        <div>
+                            <tr style="text-align:center;">
+                                <th style="text-align:center; padding:15px;">
+                                    <text style="font: caption; font-size:18px; padding-bottom:10px;">BACCALAURÉAT PROFESSIONNEL</text>
+                                    <div class="Séparateur" style="border-bottom: 1px solid #9b59b6; width:85%; margin-left:auto; margin-right:auto; margin-bottom:-20px; margin-top:10px;" ></div>
+                                    </br>
+                                    </br>
+                                    <text>Spécialité : technicien conseil-vente en animalierie</text>
+                                    </br>
+                                </th>
+                            </tr>
+                        </div>
+                    </table>
+            </div> 
+
+            <!-- Sym Dog -->
+            <div class="avec_photo" style="border-radius:10px;float:right;width: 95%; height: auto;display: inline-block; margin-left:2.5%; margin-right:2.5%;margin-bottom:50px; box-shadow: 4px 4px 4px 4px #95a5a6;">
+                    <table>
+                        <div>
+                            <tr>
+                                <th>
+                                    <div class="ConteneurLien">
+                                        <a target="_blank" href="{{asset('PhotoPresentation/Certification SymDog 001.jpg')}}">
+                                            <img style=" border-radius:10px; width:100%;  height:200px;  opacity: 0.5; "src="{{asset('PhotoPresentation/Certification SymDog 001.jpg')}}"/>
+                                            <div class="TxtCentrerPic ">Voir</div>
+                                            
+                                        </a>
+                                    </div>
+                                </th>
+                            </tr>
+                        </div>
+                        
+
+                        <div>
+                            <tr style="text-align:center;">
+                                <th style="text-align:center; padding:15px;">
+                                    <text style="font: caption; font-size:18px; padding-bottom:10px;">CERTIFICATION ÉDUCATEUR CANIN</text>
+                                    <div class="Séparateur" style="border-bottom: 1px solid #9b59b6; width:85%; margin-left:auto; margin-right:auto; margin-bottom:-20px; margin-top:10px;" ></div>
+                                    </br>
+                                    </br>
+                                    <text>formation au métier d'éducateur canin par SymDog International</text>
+                                    </br>
+                                </th>
+                            </tr>
+                        </div>
+                    </table>
+            </div> 
+            
+                
+            <!-- permis d'étention-->
+            <div class="avec_photo" style="border-radius:10px;float :left;width: 95%; height:auto ;display: inline-block; margin-left:2.5%;margin-right:2.5%; margin-bottom:50px; box-shadow: 4px 4px 4px 4px #95a5a6;">
+                    <table>
+                        <div>
+                            <tr>
+                                <th>
+                                    <div class="ConteneurLien">
+                                        <a target="_blank" href="{{asset('PhotoPresentation/Permis Détention chien de categorie 001.jpg')}}">
+                                            <img style="  border-radius:10px;opacity: 0.5;width:100%;  height:300px;   "src="{{asset('PhotoPresentation/Permis Détention chien de categorie 001.jpg')}}"/>
+                                            <div class="TxtCentrerPic ">Voir</div>
+                                        </a>
+                                    </div>
+                                </th>
+                            </tr>
+                        </div>
+                        
+
+                        <div>
+                            <tr style="text-align:center;">
+                                <th style="text-align:center; padding:15px;">
+                                    <text style="font: caption; font-size:18px; padding-bottom:10px;">ATTESTATION D'APPTITUDE CHIEN DE CATEGORIE</text>
+                                    <div class="Séparateur" style="border-bottom: 1px solid #9b59b6; width:85%; margin-left:auto; margin-right:auto; margin-bottom:-20px; margin-top:10px;" ></div>
+                                    </br>
+                                    </br>
+                                    <text>Permis de détention de chien de catégorie 1 et 2 délivré par SymDog International</text>
+                                    </br>
+                                </th>
+                            </tr>
+                        </div>
+                    </table>
+            </div> 
+
+            <!-- premier secours canin-->
+            <div class="avec_photo" style="border-radius:10px; float:right;width: 95%; height: auto;display: inline-block; margin-left:2.5%;margin-right:2.5%; margin-bottom:50px; box-shadow: 4px 4px 4px 4px #95a5a6;">
+                    <table>
+                        <div>
+                            <tr>
+                                <th>
+                                    <div class="ConteneurLien">
+                                        <a target="_blank" href="{{asset('PhotoPresentation/PremierSecoursCaninFélin.jpg')}}">
+                                            <img style="  border-radius:10px;width:100%; opacity: 0.5; height:200px;   "src="{{asset('PhotoPresentation/PremierSecoursCaninFélin.jpg')}}"/>
+                                            <div class="TxtCentrerPic ">Voir</div>
+                                        </a>
+                                    </div>
+                                </th>
+                            </tr>
+                        </div>
+                        
+
+                        <div>
+                            <tr style="text-align:center;">
+                                <th style="text-align:center; padding:15px;">
+                                    <text style="font: caption; font-size:18px; padding-bottom:10px;">CERTIFICATION PREMIERS SECOURS CANIN ET FÉLIN</text>
+                                    <div class="Séparateur" style="border-bottom: 1px solid #9b59b6; width:85%; margin-left:auto; margin-right:auto; margin-bottom:-20px; margin-top:10px;" ></div>
+                                    </br>
+                                    </br>
+                                    <text>formation au geste des premiers secours canin et félin par Premier Secours Animaliers</text>
+                                    </br>
+                                </th>
+                            </tr>
+                        </div>
+                    </table>
+            </div> 
+        </div>
+    </div>
+{% endblock %}
+
+

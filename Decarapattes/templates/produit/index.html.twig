@@ -1,0 +1,216 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestionnaire des produits{% endblock %}
+
+{% block body %}
+<style> 
+        body{
+        font-family: "Gill Sans", sans-serif;
+        }
+    </style>
+    
+	<h1 style="margin-top:20px;margin-bottom:20px; " class="blockquote text-center">Les produits</h1>
+	<a style="margin-top:20px;margin-bottom:20px; " class="blockquote text-center" href="/index.php/accessoire/"><h2>Les Accessoires</h2></a>
+
+	<table class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th>Designation</th>
+				<th>Description</th>
+				<th>Prix/unité</th>
+				<th>Quantité en stock</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+		{% for accessoire in accessoires %}
+			<tr>
+				<td>{{ accessoire.reference }}</td>
+				<td>{{ accessoire.description }}</td>
+				<td>{{ accessoire.prix }}</td>
+				<td>{{ accessoire.quantite }}</td>
+				
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+   
+	<a style="margin-top:20px;margin-bottom:20px; " class="blockquote text-center" href="/index.php/jouet/"><h2>Les Jouets</h2></a>
+
+	<table class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th>Designation</th>
+				<th>Description</th>
+				<th>Prix/unité</th>
+				<th>Quantité en stock</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+		{% for jouet in jouets %}
+			<tr>
+				<td>{{ jouet.reference }}</td>
+				<td>{{ jouet.description }}</td>
+				<td>{{ jouet.prix }}</td>
+				<td>{{ jouet.quantite }}</td>
+				
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+	
+		<a style="margin-top:20px;margin-bottom:20px; " class="blockquote text-center" href="/index.php/hygiene/et/soin/"><h2>Les produits d'hygiènes & soins</h2></a>
+
+	<table class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th>Designation</th>
+				<th>Description</th>
+				<th>Prix/unité</th>
+				<th>Quantité en stock</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+		{% for soin in soins %}
+			<tr>
+				<td>{{ soin.reference }}</td>
+				<td>{{ soin.description }}</td>
+				<td>{{ soin.prix }}</td>
+				<td>{{ soin.quantite }}</td>
+				
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+   
+	
+		<a style="margin-top:20px;margin-bottom:20px; " class="blockquote text-center" href="/index.php/complement/alimentaire/"><h2>Les compléments alimentaires </h2></a>
+
+	<table class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th>Designation</th>
+				<th>Description</th>
+				<th>Prix/unité</th>
+				<th>Quantité en stock</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+		{% for comp in comps %}
+			<tr>
+				<td>{{ comp.reference }}</td>
+				<td>{{ comp.description }}</td>
+				<td>{{ comp.prix }}</td>
+				<td>{{ comp.quantite }}</td>
+				
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+   
+	
+	
+		<a style="margin-top:20px;margin-bottom:20px; " class="blockquote text-center" href="/index.php/collier/"><h2>Les Colliers</h2></a>
+
+	<table class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th>Designation</th>
+				<th>Description</th>
+				<th>Taille (diametre?)</th>
+				<th>Couleur</th>
+				<th>Option</th>
+				<th>Bouclerie</th>
+				<th>Prix/unité</th>
+				<th>Quantité en stock</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for collier in colliers %}
+			<tr>
+				<td>{{ collier.reference }}</td>
+				<td>{{ collier.description }}</td>
+				<td>{{ collier.tailleCollier }}</td>
+				<td bgcolor="{{ collier.couleurCollier }}"></td>
+				<td>{{ collier.uneoption }}</td>
+				<td>{{ collier.unebouclerie }}</td>
+				<td>{{ collier.prix }}</td>
+				<td>{{ collier.quantite }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+    
+	
+	
+		<a style="margin-top:20px;margin-bottom:20px; " class="blockquote text-center" href="/index.php/laisse/"><h2>Les Laisses</h2></a>
+
+	<table class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th>Designation</th>
+				<th>Description</th>
+				<th>Taille</th>
+				<th>Couleur</th>
+				<th>Option</th>
+				<th>Bouclerie</th>
+				<th>Prix/unité</th>
+				<th>Quantité en stock</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for laisse in laisses %}
+			<tr>
+				<td>{{ laisse.reference }}</td>
+				<td>{{ laisse.description }}</td>
+				<td>{{ laisse.tailleLaisse }}</td>
+				<td bgcolor="{{ laisse.couleurLaisse }}"></td>
+				<td>{{ laisse.uneoption }}</td>
+				<td>{{ laisse.unebouclerie }}</td>
+				<td>{{ laisse.prix }}</td>
+				<td>{{ laisse.quantite }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+
+	
+
+		<a style="margin-top:20px;margin-bottom:20px; " class="blockquote text-center" href="/index.php/croquette/"><h2>Les Croquettes</h2></a>
+
+	<table class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th>Designation</th>
+				<th>Description</th>
+				<th>Gout</th>
+				<th>Taille</th>
+				<th>Type</th>
+				<th>Prix/unité</th>
+				<th>Quantité en stock</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for croquette in croquettes %}
+			<tr>
+				<td>{{ croquette.reference }}</td>
+				<td>{{ croquette.description }}</td>
+				<td>{{ croquette.goutCroquette }}</td>
+				<td>{{ croquette.tailleCroquette }}</td>
+				<td>{{ croquette.typeCroquette }}</td>
+				<td>{{ croquette.prix }}</td>
+				<td>{{ croquette.quantite }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+
+	
+	
+	
+	
+	
+{% endblock %}

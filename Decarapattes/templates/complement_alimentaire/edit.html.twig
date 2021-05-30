@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ComplementAlimentaire{% endblock %}
+
+{% block body %}
+    <h1>Edit ComplementAlimentaire</h1>
+
+    {{ include('complement_alimentaire/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('complement_alimentaire_index') }}">back to list</a>
+
+    {{ include('complement_alimentaire/_delete_form.html.twig') }}
+{% endblock %}

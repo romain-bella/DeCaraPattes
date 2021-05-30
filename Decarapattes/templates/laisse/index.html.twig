@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Laisse{% endblock %}
+
+{% block body %}
+    <h1>Les Laisses</h1>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reference</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Quantite</th>
+                <th>TailleLaisse</th>
+                <th>CouleurLaisse</th>
+				<th>Option</th>
+				<th>LaBouclerie</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for laisse in laisses %}
+            <tr>
+                <td>{{ laisse.id }}</td>
+                <td>{{ laisse.reference }}</td>
+                <td>{{ laisse.description }}</td>
+                <td>{{ laisse.prix }}</td>
+                <td>{{ laisse.quantite }}</td>
+                <td>{{ laisse.tailleLaisse }}</td>
+                <td bgcolor="{{ laisse.couleurLaisse }}"></td>
+				<td>{{ laisse.uneoption }}</td>
+				<td>{{ laisse.unebouclerie }}</td>
+                <td>
+                    <a href="{{ path('laisse_show', {'id': laisse.id}) }}">Détail</a>
+                    <a href="{{ path('laisse_edit', {'id': laisse.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">Aucun d'enregistré</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('laisse_new') }}">Nouvelle laisse</a><br/>
+	<a href="/index.php/produit/">Retour</a>
+{% endblock %}

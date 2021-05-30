@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ComplementAlimentaire{% endblock %}
+
+{% block body %}
+    <h1>ComplementAlimentaire</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ complement_alimentaire.id }}</td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>{{ complement_alimentaire.reference }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ complement_alimentaire.description }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ complement_alimentaire.prix }}</td>
+            </tr>
+            <tr>
+                <th>Quantite</th>
+                <td>{{ complement_alimentaire.quantite }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('complement_alimentaire_index') }}">back to list</a>
+
+    <a href="{{ path('complement_alimentaire_edit', {'id': complement_alimentaire.id}) }}">edit</a>
+
+    {{ include('complement_alimentaire/_delete_form.html.twig') }}
+{% endblock %}

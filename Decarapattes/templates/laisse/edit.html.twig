@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Laisse{% endblock %}
+
+{% block body %}
+    <h1>Edit Laisse</h1>
+
+    {{ include('laisse/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('laisse_index') }}">back to list</a>
+
+    {{ include('laisse/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Collier{% endblock %}
+
+{% block body %}
+    <h1>Create new Collier</h1>
+
+    {{ include('collier/_form.html.twig') }}
+
+    <a href="{{ path('collier_index') }}">back to list</a>
+{% endblock %}

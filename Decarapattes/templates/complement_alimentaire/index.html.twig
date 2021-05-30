@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ComplementAlimentaire{% endblock %}
+
+{% block body %}
+    <h1>Les Complements Alimentaires</h1>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reference</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Quantite</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for complement_alimentaire in complement_alimentaires %}
+            <tr>
+                <td>{{ complement_alimentaire.id }}</td>
+                <td>{{ complement_alimentaire.reference }}</td>
+                <td>{{ complement_alimentaire.description }}</td>
+                <td>{{ complement_alimentaire.prix }}</td>
+                <td>{{ complement_alimentaire.quantite }}</td>
+                <td>
+                    <a href="{{ path('complement_alimentaire_show', {'id': complement_alimentaire.id}) }}">Détail</a>
+                    <a href="{{ path('complement_alimentaire_edit', {'id': complement_alimentaire.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('complement_alimentaire_new') }}">Nouveau Complément Alimentaire</a><br/>
+	<a href="/index.php/produit/">Retour</a>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ConseilAdoption index{% endblock %}
+
+{% block body %}
+    <h1>ConseilAdoption index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for conseil_adoption in conseil_adoptions %}
+            <tr>
+                <td>{{ conseil_adoption.id }}</td>
+                <td>
+                    <a href="{{ path('conseil_adoption_show', {'id': conseil_adoption.id}) }}">show</a>
+                    <a href="{{ path('conseil_adoption_edit', {'id': conseil_adoption.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('conseil_adoption_new') }}">Create new</a>
+{% endblock %}

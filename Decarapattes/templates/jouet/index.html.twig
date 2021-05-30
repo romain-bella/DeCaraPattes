@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jouet index{% endblock %}
+
+{% block body %}
+    <h1>Jouet index</h1>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reference</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Quantite</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for jouet in jouets %}
+            <tr>
+                <td>{{ jouet.id }}</td>
+                <td>{{ jouet.reference }}</td>
+                <td>{{ jouet.description }}</td>
+                <td>{{ jouet.prix }}</td>
+                <td>{{ jouet.quantite }}</td>
+                <td>
+                    <a href="{{ path('jouet_show', {'id': jouet.id}) }}">Détail</a>
+                    <a href="{{ path('jouet_edit', {'id': jouet.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('jouet_new') }}">Nouveau Jouet</a><br/>
+	<a href="/index.php/produit/">Retour</a>
+{% endblock %}

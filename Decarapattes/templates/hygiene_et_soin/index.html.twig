@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HygieneEtSoin{% endblock %}
+
+{% block body %}
+    <h1>Produits  Hygiene&Soin</h1>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reference</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Quantite</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hygiene_et_soin in hygiene_et_soins %}
+            <tr>
+                <td>{{ hygiene_et_soin.id }}</td>
+                <td>{{ hygiene_et_soin.reference }}</td>
+                <td>{{ hygiene_et_soin.description }}</td>
+                <td>{{ hygiene_et_soin.prix }}</td>
+                <td>{{ hygiene_et_soin.quantite }}</td>
+                <td>
+                    <a href="{{ path('hygiene_et_soin_show', {'id': hygiene_et_soin.id}) }}">Détail</a>
+                    <a href="{{ path('hygiene_et_soin_edit', {'id': hygiene_et_soin.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('hygiene_et_soin_new') }}">Nouveau produit</a><br/>
+	<a href="/index.php/produit/">Retour</a>
+{% endblock %}

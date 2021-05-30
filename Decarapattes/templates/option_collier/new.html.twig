@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New OptionCollier{% endblock %}
+
+{% block body %}
+    <h1>Create new OptionCollier</h1>
+
+    {{ include('option_collier/_form.html.twig') }}
+
+    <a href="{{ path('option_collier_index') }}">back to list</a>
+{% endblock %}

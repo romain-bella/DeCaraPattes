@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TypeBouclerieLaisse index{% endblock %}
+
+{% block body %}
+    <h1>TypeBouclerieLaisse index</h1>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reference</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for type_bouclerie_laisse in type_bouclerie_laisses %}
+            <tr>
+                <td>{{ type_bouclerie_laisse.id }}</td>
+                <td>{{ type_bouclerie_laisse.reference }}</td>
+                <td>
+                    <a href="{{ path('type_bouclerie_laisse_show', {'id': type_bouclerie_laisse.id}) }}">show</a>
+                    <a href="{{ path('type_bouclerie_laisse_edit', {'id': type_bouclerie_laisse.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('type_bouclerie_laisse_new') }}">Create new</a>
+{% endblock %}

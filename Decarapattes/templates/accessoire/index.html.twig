@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accessoire{% endblock %}
+
+{% block body %}
+    <h1>Les Accessoires</h1>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reference</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Quantite</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for accessoire in accessoires %}
+            <tr>
+                <td>{{ accessoire.id }}</td>
+                <td>{{ accessoire.reference }}</td>
+                <td>{{ accessoire.description }}</td>
+                <td>{{ accessoire.prix }}</td>
+                <td>{{ accessoire.quantite }}</td>
+                <td>
+                    <a href="{{ path('accessoire_show', {'id': accessoire.id}) }}">Détail</a>
+                    <a href="{{ path('accessoire_edit', {'id': accessoire.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('accessoire_new') }}">Nouvel accessoire</a><br/>
+	<a href="/index.php/produit/">Retour</a>
+{% endblock %}

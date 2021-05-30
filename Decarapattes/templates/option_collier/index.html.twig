@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OptionCollier index{% endblock %}
+
+{% block body %}
+    <h1>OptionCollier index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for option_collier in option_colliers %}
+            <tr>
+                <td>{{ option_collier.id }}</td>
+                <td>{{ option_collier.description }}</td>
+                <td>
+                    <a href="{{ path('option_collier_show', {'id': option_collier.id}) }}">show</a>
+                    <a href="{{ path('option_collier_edit', {'id': option_collier.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('option_collier_new') }}">Create new</a>
+{% endblock %}

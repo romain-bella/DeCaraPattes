@@ -1,0 +1,276 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Visite & Promenade{% endblock %}
+
+{% block body %}
+    <style>
+    
+    .Contenu{
+        width:90%;
+        height:3000px;
+        background:white;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+        padding-top:50px;
+        margin-top:50px;
+        margin-bottom:50px;
+        font-size:40px;
+        font-weight:bold;
+        box-shadow: 4px 4px 4px 4px #95a5a6; 
+    }
+    body{
+        font:caption;
+        background:#f7d794;
+    }
+    .PresentationActivite{
+        width:100%;
+        height:auto;
+        margin-top:30px;
+        margin-bottom:50px;
+        padding:20px;
+    }
+    .ObjectifActivite{
+        width:100%;
+        height:auto;
+    }
+    .ActiviteGauche{
+        width:30%;
+        float:left;
+        display:inline-block;
+    }
+    .ActiviteMilieu{
+        width:30%;
+        display:inline-block;
+        border-left:1px solid #9b59b6;
+        border-right:1px solid #9b59b6;
+    }
+    .ActiviteDroite{
+        width:30%;
+        float:right;
+        display:inline-block;
+    }
+    .TroisObjectifs{
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
+        height:auto;
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+    .TroisObjectifs2{
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
+        height:auto;
+        margin-top:0px;
+        margin-bottom:50px;
+    }
+    text{
+        font: caption;
+        }
+    .ConsigneSecu{
+        margin-top:100px;
+        width:100%;
+        height:auto;
+        padding:50px;
+        margin-top:100px;
+    }
+    @media (max-width: 1760px){
+            .PicSupperpo3{
+                display:show
+            }
+            .PicSupperpoResponsive{
+                display:none;
+            }
+        }
+    @media (min-width: 1760px){
+            .PicSupperpoResponsive{
+                display:none;
+            }
+        }
+    .Tarif{
+       margin-top:100px;
+        width:100%;
+        height:auto;
+        padding:50px; 
+    }
+    .DivGauche{
+        float:left;
+        width:50%;
+        height:450px;
+        margin-top:100px;*
+        background:#bdc3c7;
+    }
+    .TitreTarif{
+        width:100%;
+        height:100px;
+        padding-top:25px;
+        background:#9b59b6;
+    }
+    .PicDroite{
+        float:right;
+        width:50%;
+        height:450px;
+        margin-top:100px;
+    }
+    </style>
+
+    <div class="Contenu">
+    
+        <h1 style="width:100%;
+                color: black;
+                font-size:50px;
+                font-weight:bold;
+                font-family: Reem Kufi;
+                " 
+        class="blockquote text-center">Les Cours collectifs</h1>
+
+        <div class="Séparateur" style="padding-top:0px;border-bottom:2px solid #9b59b6; margin-left:auto;margin-right:auto;width:50%;   height:30px;float:center;" ></div>
+
+        <div class="PresentationActivite">
+      
+            <div class="Conteneur_Pic_TXT" style="width:100%; height:550px;">
+            <div class="TxtDroiteB_E" style="float:right; width:55%; height:450px; margin-top:50px;padding-right:15px;">
+                <text style="text-align:;">Les sessions de cours collectifs d’éducation canine vous permettront de pratiquer au sein d’un groupe en situation réelle de la vie quotidienne. Pour tous les chiens, de toutes races, de tout âge.</text>
+                </br>
+                <text>Lorsque votre chien a atteint un certain niveau d’écoute seul, les cours de groupe offrent un perfectionnement de son obéissance en présence d’autres chiens.</text>
+                </br>
+                <text>Les cours collectifs permettent la mise en pratique des exercices dans des situations de la vie courante. </text>
+                </br>
+                <text>Chacune des séances collectives vous donnera l’occasion d’apprendre à votre animal dans des situations variées telles que rencontres avec d’autres chiens, distraction, bruits etc…</text>
+                </br>
+                <text>Le but de ce cours d’éducation canine collectif est de préparer votre chien ou votre chiot à la vie en société, à des environnements différents et avec les autres chiens.</text>
+                </br>
+            </div>
+            
+            <div class="PicSupperpo3" style="margin-top:-40px;width:45%; height:550px; margin:auto; float:left;">
+                <img class="Pic1" style="width:250px;  height:250px; margin-top:20px; border-radius:10px;"src="{{asset('CoursCollectif/CoursCollectifs3.jpg')}}"/>
+                <img class="Pic3"style="width:300px;  height:250px; margin-left:-50px; margin-top:70px; border-radius:10px;"src="{{asset('CoursCollectif/CoursCollectifs4.jpg')}}"/>
+                <br>
+                <img class="Pic2"style="width:330px;  height:250px; margin-left:50px;margin-top:-50px; border-radius:10px;"src="{{asset('CoursCollectif/CoursCollectifs2.jpg')}}"/>
+            </div>
+
+            <div class="PicSupperpoResponsive" style="margin-top:-40px;width:45%; height:550px; margin:auto; float:left;">
+                <br>
+                <img class="Pic3"style="width:300px;  height:250px; border-radius:10px;"src="{{asset('CoursCollectif/CoursCollectifs4.jpg')}}"/>
+                <br>
+                <img class="Pic2"style="width:330px;  margin-top: 25px;height:250px; border-radius:10px;"src="{{asset('CoursCollectif/CoursCollectifs2.jpg')}}"/>
+            </div>
+
+            
+        </div>
+        </div>
+
+       
+        
+        <div class="ObjectifActivite">
+            <h1 style="width:90%;
+                color: black;
+                position: absolute; 
+                font-size:30px;
+                font-weight:bold;
+                font-family: Reem Kufi;
+                " 
+            class="blockquote text-center">Objectifs</h1>
+            <div class="Séparateur" style="padding-top:70px;border-bottom:1px solid #9b59b6; margin-left:auto;margin-right:auto;width:60%;   height:30px;float:center;" ></div>
+            
+            <div class="TroisObjectifs">
+                <div class="ActiviteGauche">
+                    <img style="width:75px;  height:75px;  "src="{{asset('CoursCollectif/iconLivre.png')}}"/>
+                    </br>
+                    <text style="padding-left:10px;">Préparer votre chien à la vie en société, dans des environnements différents avec d'autres de ses congénères.</text>
+                </div>
+                
+                <div class="ActiviteMilieu">
+                    <img style="width:75px;  height:75px;  "src="{{asset('CoursCollectif/icon2ChienFaceAFace.png')}}"/>
+                    </br>
+                    <text style="padding-left:10px;">Côtoyer et interagir avec ses congénères (sociabilisation, adapter sa conduite... ).</text>
+                </div>
+
+                <div class="ActiviteDroite">
+                    <img style="width:75px;  height:75px;   "src="{{asset('CoursCollectif/iconHautParleur.png')}}"/>
+                    </br>
+                    <text style="padding-left:10px; ">Améliorer la communication intraspécifique  par le biais de mimétisme et d'imprégnation  des différents codes canins. </text>
+                </div>
+            </div>
+            <br>
+            <div class="TroisObjectifs2">
+                <div class="ActiviteGauche">
+                    <img style="width:75px;  height:75px;   "src="{{asset('CoursCollectif/iconMain.png')}}"/>
+                    </br>
+                    <text style="padding-left:10px;">Initier le propriétaire à la psychologie canine, au comportement canin, à la communication, à une écoute et au respect mutuels.</text>
+                </div>
+                    
+                <div class="ActiviteMilieu">
+                    <img style="width:75px;  height:75px;   "src="{{asset('CoursCollectif/iconMaitreEtChien.png')}}"/>
+                    </br>
+                    <text style="padding-left:10px;">Établir une relation de confiance  avec son chien</text>
+                </div>
+
+                <div class="ActiviteDroite">
+                    <img style="width:75px;  height:75px;   "src="{{asset('CoursCollectif/iCon2Chien.png')}}"/>
+                    </br>
+                    <text style="padding-left:10px;">Travail de désensibilisation en ville, pour tout type de comportement.</text>
+                </div> 
+            </div> 
+        </div>
+
+
+        <div class="ConsigneSecu">
+            <h1 style="width:100%;
+                color: black;
+                font-size:30px;
+                font-weight:bold;
+                font-family: Reem Kufi;
+                " 
+            class="blockquote text-center">Consignes de sécurité </h1>
+            <div class="Séparateur" style="padding-top:30px;margin-bottom:50px;border-bottom:1px solid #9b59b6; margin-left:auto;margin-right:auto;width:60%;   height:30px;float:center;" ></div>
+
+             <div style="float:right;"><img style="width:350px;  height:450px; border-radius:10px;  "src="{{asset('CoursCollectif/ChienCoursCo.jpg')}}"/></div>
+
+            <div style="float:left; width:65%;font-size:20px; text-align:left;">
+                <text>Les chiens présentant des comportements agressifs envers leurs congénères et envers tous types de personnes se doivent OBLIGATOIREMENT de passer par un travail individuel et avoir l’autorisation de l’éducateur canin avant de pouvoir intégrer un cours collectif. </text>
+                <text>L’éducateur canin se réserve le droit de refuser à son cours collectif tous chiens ayant un comportement dangereux.</text>
+                 <br> <br>
+                <text> Vous êtes tenu être responsable de votre chien pendant tout le cours. Je vous invite à vérifier que vous êtes couvert par votre responsabilité civile.</text>
+               
+                <text> Lors du cours, je vous demande de suivre les consignes que je vous prodigue. Mes méthodes sont respectueuses et bienveillantes.</text>
+                <br> <br>
+                <text>Si une bagarre entre chiens se produit, je vous demande de ne pas intervenir personnellement même si cela concerne votre chien. Sauf bien sûr si je vous demande d’appeler ou d’attraper votre chien. Reposez-vous sur moi pour gérer la situation.</text>
+               
+                <text>Je ne pourrai pas être tenu responsable de toute blessure intervenant sur un chien ou un humain.</text>
+                 <br> <br>
+                <text>Merci de respecter les lieux et les personnes présentes.</text>
+                
+                <text>Je vous demande de ramasser les excréments avant, pendant et après le cours.</text>
+                <br> <br>
+                <text>Le groupe est un endroit protégé où la critique n’est pas autorisée. Nous avons tous nos difficultés et facilités.</text>
+                
+                <text>Je me réserve le droit d’exclure du groupe toute personne qui pourrait perturber volontairement le groupe et toute personne dont le comportement n'est pas respectueux et bienveillant.</text>
+            </div> 
+
+
+        </div>
+        <div class="Tarif">
+
+            <div class="DivGauche">
+                <div class="TitreTarif">
+                    <p style="color:white;">Mes Tarifs</p>
+                </div>
+            </div>
+
+            <div class="PicDroite">
+                <img style="width:100%;  height:450px;  "src="{{asset('CoursCollectif/CoursCoTarif.jpg')}}"/>
+            </div>
+
+        </div>
+
+    </div>
+    
+    
+    
+
+    
+
+{% endblock %}

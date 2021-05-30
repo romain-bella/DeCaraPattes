@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Croquette{% endblock %}
+
+{% block body %}
+    <h1>Create new Croquette</h1>
+
+    {{ include('croquette/_form.html.twig') }}
+
+    <a href="{{ path('croquette_index') }}">back to list</a>
+{% endblock %}
